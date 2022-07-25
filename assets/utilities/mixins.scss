@@ -1,0 +1,122 @@
+@mixin logo_img {
+  width: $space_60 + $space_20;
+  height: $space_60 + $space_20;
+  border-radius: $border-radius_50;
+}
+@mixin border_with_radius {
+  border: 1px solid $color_EBEFF2;
+  border-radius: $border-radius_6;
+}
+@mixin blue_button {
+  font-size: $font_size_14;
+  height: $height_44;
+  background: $color_4B64A4;
+  border-radius: $radius_25;
+  color: $color_fff;
+  border: 0px;
+  &:focus {
+    box-shadow: none;
+  }
+}
+@mixin border_button {
+  font-size: $font_size_14;
+  height: $height_36;
+  border-radius: $radius_25;
+  border: 1px solid $color_203864;
+  color: $color_203864;
+  letter-spacing: $letter-spacing_5;
+  font-weight: 500;
+  line-height: $line_height_24;
+  background: transparent;
+  padding: 6px 16px;
+}
+@mixin button_203864 {
+  font-size: $font_size_14;
+  @include flex_center;
+  height: $height_44 + 2px;
+  border-radius: $radius_25;
+  color: $color_fff;
+  border: 0px;
+  padding: 0px $space_16;
+  background: $color_203864;
+  .icon {
+    &:before {
+      color: $color_fff;
+      margin-right: $space_8;
+      font-size: $font_size_18 + 2px;
+    }
+  }
+}
+@mixin label_text {
+  font-size: $font_size_14;
+  font-weight: $font_weight_400;
+  color: $color_5C616C;
+}
+@mixin label_text_2 {
+  font-size: $font_size_13;
+  font-weight: $font_weight_400;
+  line-height: $line_height_24;
+  letter-spacing: $letter-spacing_5;
+  color: $color_5381E9;
+}
+@mixin simple_text {
+  font-size: $font_size_14;
+  font-weight: $font_weight_400;
+  line-height: $line_height_18;
+  color: $color_475462;
+}
+@mixin simple_text_2 {
+  font-size: $font_size_14;
+  font-weight: $font_weight_400;
+  line-height: $line_height_21;
+  color: $color_203864;
+  letter-spacing: $letter-spacing_2;
+}
+@mixin table_text {
+  font-size: $font_size_13;
+  font-weight: $font_weight_400;
+  line-height: $line_height_17;
+  letter-spacing: $letter-spacing;
+  color: $color_475462;
+}
+@mixin drpdwn_text {
+  font-size: $font_size_14;
+  font-weight: $font_weight_400;
+  line-height: $line_height_21;
+  letter-spacing: $letter-spacing_2;
+  color: $color_475462;
+}
+@mixin page_title {
+  font-size: $font_size_18;
+  font-weight: $font_weight_700;
+  line-height: $line_height_18;
+  letter-spacing: $letter-spacing_5;
+  color: $color_203864;
+}
+@mixin form_title {
+  font-weight: $font_weight_700;
+  line-height: $line_height_40;
+  letter-spacing: $letter-spacing;
+}
+@mixin flex_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex_between_start {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex_center_start {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_start {
+  display: flex;
+  align-items: baseline;
+}

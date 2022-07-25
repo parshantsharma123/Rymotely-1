@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+body {
+  font-family: "DM Sans" !important;
+  /* Button 1 */
+}
+body a {
+  text-decoration: none !important;
+}
+body .form-control,
+body .form-select {
+  border: 1px solid #dbdbdb !important;
+  color: #9fa6b3 !important;
+  font-size: 14px !important;
+}
+body .form-control:focus,
+body .form-select:focus,
+body .form-check-input:focus,
+body .form-check-input:focus {
+  box-shadow: none !important;
+}
+body .form-check-input {
+  font-size: 16px;
+  border: 2px solid #b4bbc3;
+}
+body .form-check-input:focus {
+  border-color: #b4bbc3;
+}
+body .form-check-input:checked {
+  background-color: #4b64a4 !important;
+  border-color: #4b64a4 !important;
+}
+body :-ms-input-placeholder {
+  color: #b4bbc3 !important;
+}
+body ::-moz-placeholder {
+  color: #b4bbc3 !important;
+}
+body ::placeholder {
+  color: #b4bbc3 !important;
+}
+body .margin-top-25 {
+  margin-top: 25px;
+}
+body .box-shadow {
+  box-shadow: 0px 4px 20px rgba(60, 60, 60, 0.1);
+}
+body input[type=date]::-webkit-calendar-picker-indicator {
+  background: url(../images/icons/calender.svg) no-repeat;
+  background-size: 16px;
+}
+body select {
+  background: url(../images/icons/down.svg) no-repeat !important;
+  background-position: right 12px center !important;
+}
+body .form-control:disabled {
+  background: transparent;
+}
+body .form-check {
+  padding: 0px;
+}
+body .form-check .form-check-input {
+  margin-left: 0px;
+}
+body .form-check .form-check-label {
+  line-height: 24px;
+  margin-left: 8px;
+}
+body .toggle-button-cover {
+  display: table-cell;
+  position: relative;
+  box-sizing: border-box;
+}
+body .toggle-button-cover .button-toggle.button {
+  position: relative;
+  top: 50%;
+  width: 42px;
+  height: 24px;
+  overflow: hidden;
+  border-radius: 100px;
+}
+body .toggle-button-cover .button-toggle .checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+body .toggle-button-cover .button-toggle .checkbox:checked + .knobs:before {
+  content: "";
+  left: 19px;
+  background-color: #ffffff;
+}
+body .toggle-button-cover .button-toggle .checkbox:checked ~ .layer {
+  background-color: #28C76F;
+}
+body .toggle-button-cover .button-toggle .knobs {
+  z-index: 2;
+  transition: 0.3s ease all;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+body .toggle-button-cover .button-toggle .knobs:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  transition: 0.3s ease all;
+}
+body .toggle-button-cover .button-toggle .layer {
+  width: 100%;
+  background-color: #b4bbc3;
+  transition: 0.3s ease all;
+  z-index: 1;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}/*# sourceMappingURL=main.css.map */

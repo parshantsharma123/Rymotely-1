@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../assets/scss/dashboard.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/icons/icon.css">
+</head>
+
+<body class="dashboard_page">
+    <div class="main_section">
+        <nav class="active">
+            <ul>
+                <div class="logo"><span>Rymotely</span></div>
+                <li>
+                    <div class="dropdown workspace-dropdown">
+                        <a href="#" class="workspace dropdown-toggle" id="workspace_drp"
+                            data-bs-toggle="dropdown">Create Workspace<span class="icon-right"></span></a>
+                        <div class="dropdown-menu" aria-labelledby="workspace_drp">
+                            <a class="dropdown-item create_new" href="#"><span class="icon-plus"></span>Create New
+                                Workspace</a>
+                            <div class="dropdown-divider"></div>
+                            <span>
+                                <label>My Workspaces</label>
+                                <a class="dropdown-item" href="#">BRX Co</a>
+                                <a class="dropdown-item" href="#">Design Team</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Some Other Workspaces</a>
+                                <a class="dropdown-item" href="#">Some Other Workspaces</a>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="./Dashboard.html"><span class="icon icon-home"></span><span
+                            class="title">Dashboard</span></a></li>
+                <li><a href="../customer/CustomerList.html"><span class="icon icon-customers"></span><span
+                            class="title">Customers</span></a></li>
+                <li><a href="#"><span class="icon icon-projects"></span><span class="title">Projects</span></a></li>
+                <li><a href="#"><span class="icon icon-tasks"></span><span class="title">Tasks</span></a></li>
+                <li><a href="#"><span class="icon icon-proposals"></span><span class="title">Proposals</span></a></li>
+                <li><a href="#"><span class="icon icon-invoices"></span><span class="title">Invoices</span></a></li>
+                <li><a href="#"><span class="icon icon-contracts"></span><span class="title">Contracts</span></a></li>
+                <li><a href="#"><span class="icon icon-accounting"></span><span class="title">Accounting</span></a></li>
+                <li><a href="#"><span class="icon icon-reports"></span><span class="title">Reports</span></a></li>
+            </ul>
+            <div class="plan-upgrade_view">
+                <div class="upgrade_content">
+                    <span class="icon_text">
+                        <span class="icon-award"></span>
+                        <p>Free month trial period will <b>expired 22.10.2021</b></p>
+                    </span>
+                    <button>Upgrade your plan</button>
+                </div>
+            </div>
+        </nav>
+        <div class="dashboard_content_wrapper">
+            <div class="mobile_header">
+                <div class="toggle">
+                    <img src="../assets/images/icons/hamburger.svg" alt="">
+                </div>
+                <h3>Dashboard</h3>
+            </div>
+            <div class="head box-shadow">
+                <a href="#" class="timer">Timer</a>
+                <div class="notification-message">
+
+                    <div class="dropdown create-dropdown">
+                        <button class="create-button dropdown-toggle" id="create_drp" data-bs-toggle="dropdown"><span
+                                class="icon icon-plus"></span> Create</button>
+                        <div class="dropdown-menu" aria-labelledby="create_drp">
+                            <a class="dropdown-item" href="#">Task</a>
+                            <a class="dropdown-item" href="#">Project</a>
+                            <a class="dropdown-item" href="#">Invoice</a>
+                            <a class="dropdown-item" href="#">Proposal</a>
+                            <a class="dropdown-item" href="#">Contract</a>
+                        </div>
+                    </div>
+
+                    <a class="head-icons mr-lg-2" id="messages" href="#">
+                        <span class="icon icon-chat"></span>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+                    </a>
+                    <div class="dropdown notification-dropdown">
+                        <a class="dropdown-toggle head-icons mr-lg-2" id="notification" href="#"
+                            data-bs-toggle="dropdown">
+                            <span class="icon icon-notifications"></span>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">7</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="notification">
+                            <h6 class="header_title">Notification<span class="badge rounded-pill">7 New</span>
+                            </h6>
+                            <a class="dropdown-item" href="#">
+                                <span class="icon icon-tasks"></span>
+                                <div class="notification-content">
+                                    <div class="title_time">
+                                        <span class="text"><strong>New Task “Design”</strong> - Project Name</span>
+                                        <span class="small time">11:21 AM</span>
+                                    </div>
+                                    <div class="by">by Jordana Jacobs</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <span class="icon icon-chat"></span>
+                                <div class="notification-content">
+                                    <div class="title_time">
+                                        <span class="text"><strong>New Comment</strong> for Project Name</span>
+                                        <span class="small time">Week ago</span>
+                                    </div>
+                                    <div class="by">by Corbin Farley</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown profile-dropdown">
+                        <a class="dropdown-toggle head-icons mr-lg-2" id="profile" href="#" data-bs-toggle="dropdown">
+                            <img src="../assets/images/profile.png" alt=""> <span class="icon icon-down"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="profile">
+
+                            <div class="dropdown language-dropdown">
+                                <span class="lang_text"><span class="icon icon-globe"></span> English</span>
+                                <a href="#" class="dropdown-toggle dropdown-toggle-split" id="language"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                                    <span class="icon icon-down"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="language">
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Arabic</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Spanish</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>French</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Turkish</a>
+                                </ul>
+                            </div>
+
+                            <a class="dropdown-item small" href="#"><span class="icon icon-profile"></span> My
+                                Profile</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-tasks"></span> My Plan</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-tasks"></span> Billing
+                                History</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-setting"></span> Settings</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-logout"></span> Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row margin-top-25 ptpc">
+                <div class="col-xl-3 col-sm-6">
+                    <div class="cards box-shadow d-flex align-items-center">
+                        <div class="icons">
+                            <span class="icon-projects"></span>
+                        </div>
+                        <div class="text-content">
+                            <h3>30</h3>
+                            <p>Projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="cards box-shadow d-flex align-items-center">
+                        <div class="icons">
+                            <span class="icon-tasks"></span>
+                        </div>
+                        <div class="text-content">
+                            <h3>230</h3>
+                            <p>Tasks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="cards box-shadow d-flex align-items-center">
+                        <div class="icons">
+                            <span class="icon-proposals"></span>
+                        </div>
+                        <div class="text-content">
+                            <h3>45</h3>
+                            <p>Proposals</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="cards box-shadow d-flex align-items-center">
+                        <div class="icons">
+                            <span class="icon-contracts"></span>
+                        </div>
+                        <div class="text-content">
+                            <h3>150</h3>
+                            <p>Contracts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table_dataview_ box-shadow table_after margin-top-25">
+                <div class="table_head">
+                    <div class="table_title">
+                        <span class="icon icon-projects"></span>
+                        <p>Projects</p>
+                        <a href="javascript:void(0)" data-bs-target="#addproject" data-bs-toggle="modal"
+                            data-bs-dismiss="modal"><span class="icon-plus"></span></a>
+                    </div>
+                    <a class="right-icon" href="javascript:void(0)"><span class="icon-right"></span></a>
+                </div>
+                <div class="table-responsive table-height">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="name">City Stal</td>
+                                <td class="username">Joanne Green</td>
+                                <td class="tag">
+                                    <p>tag</p>
+                                </td>
+                                <td class="image">
+                                    <ul>
+                                        <li><img src="../assets/images/profile.png" /></li>
+                                        <li><span>RS</span></li>
+                                    </ul>
+                                </td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="complete">Complete</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#">Edit</a>
+                                            <a class="dropdown-item" href="#">Complete</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Castillo Group</td>
+                                <td class="username">Alysia Irwin</td>
+                                <td class="tag">
+                                    <p>tag</p>
+                                </td>
+                                <td class="image">
+                                    <ul>
+                                        <li><span>CH</span></li>
+                                        <li><img src="../assets/images/profile.png" /></li>
+                                    </ul>
+                                </td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="complete">Complete</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#">Edit</a>
+                                            <a class="dropdown-item" href="#">Complete</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Finley</td>
+                                <td class="username">Constance Hooper</td>
+                                <td class="tag">
+                                    <p>tag</p>
+                                </td>
+                                <td class="image">
+                                    <ul>
+                                        <li>G</li>
+                                        <li><img src="../assets/images/profile.png" /></li>
+                                    </ul>
+                                </td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="complete">Complete</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#">Edit</a>
+                                            <a class="dropdown-item" href="#">Complete</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Finley</td>
+                                <td class="username">Constance Hooper</td>
+                                <td class="tag">
+                                    <p>tag</p>
+                                </td>
+                                <td class="image">
+                                    <ul>
+                                        <li><img src="../assets/images/profile.png" /></li>
+                                        <li><span>JS</span></li>
+                                    </ul>
+                                </td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="complete">Complete</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#">Edit</a>
+                                            <a class="dropdown-item" href="#">Complete</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Finley</td>
+                                <td class="username">Constance Hooper</td>
+                                <td class="tag">
+                                    <p>tag</p>
+                                </td>
+                                <td class="image">
+                                    <ul>
+                                        <li><span>RS</span></li>
+                                        <li><img src="../assets/images/profile.png" /></li>
+                                    </ul>
+                                </td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="complete">Complete</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#">Edit</a>
+                                            <a class="dropdown-item" href="#">Complete</a>
+                                            <a class="dropdown-item" href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="timer-task-section margin-top-25">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="table_dataview_ timer_view table_after box-shadow">
+                            <div class="table_head">
+                                <div class="table_title">
+                                    <span class="icon icon-timer"></span>
+                                    <p>Timer</p>
+                                </div>
+                                <span class="icon"></span>
+                            </div>
+                            <div class="table-responsive table-height">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="timertext">Project Name - <b>“Design”</b></td>
+                                            <td class="time text-center"><b>00:16:34</b></td>
+                                            <td class="text-end"><a class="d-flex justify-content-end" href="#"><span
+                                                        class="icon-play"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="timertext">Project Name - <b>“Marketing”</b></td>
+                                            <td class="time text-center"><b>03:16:23</b></td>
+                                            <td class="text-end"><a class="d-flex justify-content-end" href="#"><span
+                                                        class="icon-play"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="timertext">Project Name - <b>“Design”</b></td>
+                                            <td class="time text-center"><b>00:16:34</b></td>
+                                            <td class="text-end"><a class="d-flex justify-content-end" href="#"><span
+                                                        class="icon-play"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="timertext">Project Name - <b>“Marketing”</b></td>
+                                            <td class="time text-center"><b>03:16:23</b></td>
+                                            <td class="text-end"><a class="d-flex justify-content-end" href="#"><span
+                                                        class="icon-play"></span></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="table_dataview_ tasks_view table_after box-shadow">
+                            <div class="table_head">
+                                <div class="table_title">
+                                    <span class="icon icon-tasks"></span>
+                                    <p>Tasks</p>
+                                    <a href="javascript:void(0)" data-bs-target="#addtask" data-bs-toggle="modal"><span
+                                            class="icon-plus"></span></a>
+                                </div>
+                                <a class="right-icon" href="javascript:void(0)"><span class="icon-right"></span></a>
+                            </div>
+                            <div class="table-responsive table-height">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="taskname name">Design wireframes</td>
+                                            <td class="text-center">
+                                                <u>29/02/2020</u>
+                                            </td>
+                                            <td class="image">
+                                                <ul>
+                                                    <li><img src="../assets/images/profile.png" /></li>
+                                                </ul>
+                                            </td>
+                                            <td class="status_progress">
+                                                <select class="form-select" aria-label="Default select">
+                                                    <option value="medium">Medium</option>
+                                                    <option value="small">Small</option>
+                                                </select>
+                                            </td>
+                                            <td class="dots text-end">
+                                                <div class="dropdown dropstart">
+                                                    <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                                        data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Complete</a>
+                                                        <a class="dropdown-item" href="#">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="taskname name">UI/UX research</td>
+                                            <td class="text-center">
+                                                <u>29/02/2020</u>
+                                            </td>
+                                            <td class="image">
+                                                <ul>
+                                                    <li><img src="../assets/images/profile.png" /></li>
+                                                </ul>
+                                            </td>
+                                            <td class="status_progress">
+                                                <select class="form-select" aria-label="Default select">
+                                                    <option value="medium">Medium</option>
+                                                    <option value="small">Small</option>
+                                                </select>
+                                            </td>
+                                            <td class="dots text-end">
+                                                <div class="dropdown dropstart">
+                                                    <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                                        data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Complete</a>
+                                                        <a class="dropdown-item" href="#">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="taskname name">Social media research</td>
+                                            <td class="text-center">
+                                                <u>29/02/2020</u>
+                                            </td>
+                                            <td class="image">
+                                                <ul>
+                                                    <li><img src="../assets/images/profile.png" /></li>
+                                                </ul>
+                                            </td>
+                                            <td class="status_progress">
+                                                <select class="form-select" aria-label="Default select">
+                                                    <option value="medium">Medium</option>
+                                                    <option value="small">Small</option>
+                                                </select>
+                                            </td>
+                                            <td class="dots text-end">
+                                                <div class="dropdown dropstart">
+                                                    <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                                        data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Complete</a>
+                                                        <a class="dropdown-item" href="#">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="taskname name">UI/UX research</td>
+                                            <td class="text-center">
+                                                <u>29/02/2020</u>
+                                            </td>
+                                            <td class="image">
+                                                <ul>
+                                                    <li><span>CH</span></li>
+                                                </ul>
+                                            </td>
+                                            <td class="status_progress">
+                                                <select class="form-select" aria-label="Default select">
+                                                    <option value="medium">Medium</option>
+                                                    <option value="small">Small</option>
+                                                </select>
+                                            </td>
+                                            <td class="dots text-end">
+                                                <div class="dropdown dropstart">
+                                                    <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                                        data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Complete</a>
+                                                        <a class="dropdown-item" href="#">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Add Project Modal -->
+    <div class="modal fade" id="addproject" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="addprojectLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Project</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <div class="form-input col-12">
+                            <label class="form-label">Project Name</label>
+                            <input type="text" class="form-control" placeholder="Project Name">
+                        </div>
+                        <div class="form-input col-12">
+                            <label class="form-label">Project Description</label>
+                            <textarea class="form-control" placeholder="Enter some project description"></textarea>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Customer</label>
+                            <select class="form-select">
+                                <option selected>Select customer or add new one</option>
+                                <option>Customer 1</option>
+                                <option>Customer 2</option>
+                            </select>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Members</label>
+                            <select class="form-select">
+                                <option selected>Select members for this project</option>
+                                <option>Members 1</option>
+                                <option>Members 2</option>
+                            </select>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Start Date</label>
+                            <div class="input-group startdate">
+                                <input type="date" class="form-control" placeholder="Start Date" />
+                            </div>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Due Date</label>
+                            <div class="input-group duedate">
+                                <input type="date" class="form-control" placeholder="Due Date" />
+                            </div>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Status</label>
+                            <select class="form-select">
+                                <option selected>Select Status</option>
+                                <option>Complete</option>
+                                <option>Progerss</option>
+                                <option>Pending</option>
+                            </select>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Billing Type</label>
+                            <select class="form-select">
+                                <option selected>Select Type</option>
+                                <option>COD</option>
+                                <option>Online Payment</option>
+                            </select>
+                        </div>
+
+                        <div class="form-footer">
+                            <div class="left">
+                                <a href="#" data-bs-target="#projectsetting" data-bs-toggle="modal"
+                                    data-bs-dismiss="modal">Project Settings</a>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="createemail">
+                                    <label class="form-check-label" for="createemail">Send project created
+                                        e-mail</label>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Setting Modal -->
+    <div class="modal fade permissions" id="projectsetting" data-bs-backdrop="static" aria-hidden="true"
+        aria-labelledby="projectsettinglabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="javascript:void(0)" class="back_icon" data-bs-target="#addproject" data-bs-toggle="modal"
+                        data-bs-dismiss="modal"><span class="icon icon-back"></span></a>
+                    <h5 class="modal-title">Project Settings</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <h3>Allow Customer To View</h3>
+                        <div class="settings gridthree">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="task">
+                                <label class="form-check-label" for="task">Task</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checklist">
+                                <label class="form-check-label" for="checklist">Task Checklist Items</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="timesheets">
+                                <label class="form-check-label" for="timesheets">Timesheets</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="comments">
+                                <label class="form-check-label" for="comments">Task Comments</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="loggedtime">
+                                <label class="form-check-label" for="loggedtime">Task Total Logged Time</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="activitylog">
+                                <label class="form-check-label" for="activitylog">Activity Log</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="attachments">
+                                <label class="form-check-label" for="attachments">Task Attachments</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="finance">
+                                <label class="form-check-label" for="finance">Finance Overview</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="teammembers">
+                                <label class="form-check-label" for="teammembers">Team Members</label>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <h3>Allow Customer To</h3>
+                        <div class="settings gridtwo">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="createtasks">
+                                <label class="form-check-label" for="createtasks">Create Tasks</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="uploadfiles">
+                                <label class="form-check-label" for="uploadfiles">Upload Files</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="edittasks">
+                                <label class="form-check-label" for="edittasks">Edit Tasks (only tasks created from
+                                    contact)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="hideproject">
+                                <label class="form-check-label" for="hideproject">Hide project tasks</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="taskcomment">
+                                <label class="form-check-label" for="taskcomment">Comment on project tasks</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="uploadattachments">
+                                <label class="form-check-label" for="uploadattachments">Upload Attachments On
+                                    Tasks</label>
+                            </div>
+                        </div>
+
+                        <div class="form-footer">
+                            <div class="left">
+                            </div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Add Project Modal -->
+
+    <!-- Add Task Modal -->
+    <div class="modal fade" id="addtask" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="addtaskLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Task</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <div class="form-input col-12">
+                            <label class="form-label">Task Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Task Name">
+                        </div>
+                        <div class="form-input col-12">
+                            <label class="form-label">Task Description</label>
+                            <textarea class="form-control" placeholder="Enter some task description"></textarea>
+                        </div>
+                        <div class="form-input col-md-8">
+                            <label class="form-label">Estimated Hours and Hourly Rate</label>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control brdr-right" placeholder="0" />
+                                        <input type="text" class="form-control brdr-left" placeholder="Hours"
+                                            disabled />
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control brdr-right" placeholder="0,00" />
+                                        <select class="form-select perhours brdr-left">
+                                            <option selected>USD/hour</option>
+                                            <option>EURO/hour</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-input col-md-4">
+                            <label class="form-label">Due Date</label>
+                            <div class="input-group date">
+                                <input type="date" class="form-control" placeholder="Start Date" />
+                            </div>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Related to project</label>
+                            <select class="form-select">
+                                <option selected>Logo Design</option>
+                                <option>Website Design</option>
+                                <option>Banner Design</option>
+                            </select>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Priority</label>
+                            <select class="form-select">
+                                <option selected>Medium</option>
+                                <option>First</option>
+                            </select>
+                        </div>
+
+                        <div class="form-footer">
+                            <div class="left">
+                            </div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+</body>
+
+</html>

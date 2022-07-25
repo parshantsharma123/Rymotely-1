@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="../assets/scss/dashboard.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-select.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-datatable.css">
+    <link rel="stylesheet" href="../assets/icons/icon.css">
+</head>
+
+<body class="_contact_page">
+    <div class="main_section">
+        <nav class="active info_nav">
+            <ul>
+                <div class="logo"><span>Rymotely</span></div>
+                <li class="back">
+                    <a href="./CustomerList.html"><span class="icon icon-back"></span> Back to Customers</a>
+                </li>
+                <p class="navtitle">Customer Name</p>
+                <li><a href="./CustomerInfo.html"><span class="icon icon-customers"></span><span
+                            class="title">info</span></a></li>
+                <li><a href="./Contacts.html"><span class="icon icon-tasks"></span><span
+                            class="title">Contacts</span></a></li>
+                <li><a href="./Files.html"><span class="icon icon-files"></span><span class="title">Files</span></a>
+                </li>
+                <li><a href="#"><span class="icon icon-projects"></span><span class="title">Projects</span></a></li>
+                <li><a href="#"><span class="icon icon-tasks"></span><span class="title">Tasks</span></a></li>
+                <li><a href="#"><span class="icon icon-invoices"></span><span class="title">Invoices</span></a></li>
+                <li><a href="#"><span class="icon icon-expenses"></span><span class="title">Expenses</span></a></li>
+                <li><a href="#"><span class="icon icon-contracts"></span><span class="title">Contracts</span></a></li>
+                <li><a href="#"><span class="icon icon-proposals"></span><span class="title">Proposals</span></a></li>
+                <li><a href="#"><span class="icon icon-statement"></span><span class="title">Statement</span></a></li>
+            </ul>
+            <div class="plan-upgrade_view">
+                <div class="upgrade_content">
+                    <span class="icon_text">
+                        <span class="icon-award"></span>
+                        <p>Free month trial period will <b>expired 22.10.2021</b></p>
+                    </span>
+                    <button>Upgrade your plan</button>
+                </div>
+            </div>
+        </nav>
+        <div class="dashboard_content_wrapper">
+            <div class="mobile_header">
+                <div class="toggle">
+                    <img src="../assets/images/icons/hamburger.svg" alt="">
+                </div>
+                <h3>Dashboard</h3>
+            </div>
+            <div class="head box-shadow">
+                <a href="#" class="timer">Timer</a>
+                <div class="notification-message">
+
+                    <div class="dropdown create-dropdown">
+                        <button class="create-button dropdown-toggle" id="create_drp" data-bs-toggle="dropdown"><span
+                                class="icon icon-plus"></span> Create</button>
+                        <div class="dropdown-menu" aria-labelledby="create_drp">
+                            <a class="dropdown-item" href="#">Task</a>
+                            <a class="dropdown-item" href="#">Project</a>
+                            <a class="dropdown-item" href="#">Invoice</a>
+                            <a class="dropdown-item" href="#">Proposal</a>
+                            <a class="dropdown-item" href="#">Contract</a>
+                        </div>
+                    </div>
+
+                    <a class="head-icons mr-lg-2" id="messages" href="#">
+                        <span class="icon icon-chat"></span>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+                    </a>
+                    <div class="dropdown notification-dropdown">
+                        <a class="dropdown-toggle head-icons mr-lg-2" id="notification" href="#"
+                            data-bs-toggle="dropdown">
+                            <span class="icon icon-notifications"></span>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">7</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="notification">
+                            <h6 class="header_title">Notification<span class="badge rounded-pill">7 New</span>
+                            </h6>
+                            <a class="dropdown-item" href="#">
+                                <span class="icon icon-tasks"></span>
+                                <div class="notification-content">
+                                    <div class="title_time">
+                                        <span class="text"><strong>New Task “Design”</strong> - Project Name</span>
+                                        <span class="small time">11:21 AM</span>
+                                    </div>
+                                    <div class="by">by Jordana Jacobs</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <span class="icon icon-chat"></span>
+                                <div class="notification-content">
+                                    <div class="title_time">
+                                        <span class="text"><strong>New Comment</strong> for Project Name</span>
+                                        <span class="small time">Week ago</span>
+                                    </div>
+                                    <div class="by">by Corbin Farley</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown profile-dropdown">
+                        <a class="dropdown-toggle head-icons mr-lg-2" id="profile" href="#" data-bs-toggle="dropdown">
+                            <img src="../assets/images/profile.png" alt=""> <span class="icon icon-down"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="profile">
+
+                            <div class="dropdown language-dropdown">
+                                <span class="lang_text"><span class="icon icon-globe"></span> English</span>
+                                <a href="#" class="dropdown-toggle dropdown-toggle-split" id="language"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                                    <span class="icon icon-down"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="language">
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Arabic</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Spanish</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>French</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Turkish</a>
+                                </ul>
+                            </div>
+
+                            <a class="dropdown-item small" href="#"><span class="icon icon-profile"></span> My
+                                Profile</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-tasks"></span> My Plan</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-tasks"></span> Billing
+                                History</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-setting"></span> Settings</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-logout"></span> Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page_head margin-top-25">
+                <div class="page_title">
+                    <p></p>
+                </div>
+                <button data-bs-target="#addcontact" data-bs-toggle="modal">Add New Contacts</button>
+            </div>
+
+            <div class="table_dataview_ table_withdata box-shadow margin-top-25">
+                <div class="table_head table_search_filters">
+                    <div class="search">
+                        <span class="icon icon-search"></span>
+                    </div>
+                    <div class="filters">
+                        <select class="selectpicker filterselect group_filter">
+                            <option>All Groups</option>
+                            <option>Design</option>
+                            <option>Marketing</option>
+                            <option>Development</option>
+                            <option>CEO</option>
+                        </select>
+                        <select class="selectpicker filterselect file_filter">
+                            <option>Export</option>
+                            <option>Excel</option>
+                            <option>PDF</option>
+                            <option>CVS</option>
+                            <option>Print</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table data_table_">
+                        <thead>
+                            <tr>
+                                <th>Contact Name</th>
+                                <th>Contact Type</th>
+                                <th>Position</th>
+                                <th>E-Mail</th>
+                                <th>Phone</th>
+                                <th>Last Login</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#" class="detail_link"> <img src="../assets/images/profile.png" /> Joanne
+                                        Green</a></td>
+                                <td>Primary Contact</td>
+                                <td>CEO</td>
+                                <td><a href="mailto:joanne_gr@mail.com">joanne_gr@mail.com</a></td>
+                                <td>+00 765 432 11 11</td>
+                                <td>2 days ago</td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#" data-bs-target="#permissionssettings"
+                                                data-bs-toggle="modal"><img class="icon"
+                                                    src="../assets/images/icons/settings.svg" />
+                                                Settings</a>
+                                            <a class="dropdown-item" href="#" data-bs-target="#editaboutinfo"
+                                                data-bs-toggle="modal"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a data-bs-target="#deletemodal" data-bs-toggle="modal"
+                                                class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="detail_link"> <img src="../assets/images/profile.png" /> Alysia
+                                        Irwin</a></td>
+                                <td></td>
+                                <td>CEO</td>
+                                <td><a href="mailto:alysia_097@mail.com">alysia_097@mail.com</a></td>
+                                <td>+44 924 881 95 90</td>
+                                <td>3 days ago</td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#" data-bs-target="#permissionssettings"
+                                                data-bs-toggle="modal">
+                                                <img class="icon" src="../assets/images/icons/settings.svg" />
+                                                Settings</a>
+                                            <a class="dropdown-item" href="#" data-bs-target="#editaboutinfo"
+                                                data-bs-toggle="modal"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a data-bs-target="#deletemodal" data-bs-toggle="modal"
+                                                class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Add New Contact Modal -->
+    <div class="modal fade" id="addcontact" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="addcontactLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Company Contact</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form class="form_height">
+                        <div class="row">
+                            <div class="logo">
+                                <img src="../assets/images/addlogo.png" alt="logo">
+                                <a href="#"><span class="icon-plus"></span>Add photo</a>
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" placeholder="Enter First Name">
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Enter Last Name">
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">Position</label>
+                                <input type="text" class="form-control" placeholder="Enter Position">
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" placeholder="Enter Phone Number">
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">E-Mail</label>
+                                <input type="email" class="form-control" placeholder="Enter E-Mail">
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">Contact Type</label>
+                                <select class="form-select">
+                                    <option>Primary</option>
+                                    <option>Employee</option>
+                                    <option>Coworker</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-footer">
+                            <div class="left">
+                                <a href="#" data-bs-target="#permissionssettings" data-bs-toggle="modal"
+                                    data-bs-dismiss="modal">Permissions Settings</a>
+                            </div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Permission Setting Modal -->
+    <div class="modal fade permissions" id="permissionssettings" data-bs-backdrop="static" aria-hidden="true"
+        aria-labelledby="permissionssettingslabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="javascript:void(0)" class="back_icon" data-bs-target="#addcontact" data-bs-toggle="modal"
+                        data-bs-dismiss="modal"><span class="icon icon-back"></span></a>
+                    <h5 class="modal-title">Permissions Settings</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="modal-body">
+                    <form class="form_height">
+                        <div class="row">
+                            <h3 class="margin-top-25 mb-0">Permissions</h3>
+                            <small class="mb-4">Make sure to set appropriate permissions for this contact</small>
+                            <div class="settings gridtwo">
+                                <div class="form-check">
+                                    <label>Invoices</label>
+                                    <div class="toggle-button-cover">
+                                        <div class="button button-toggle">
+                                            <input type="checkbox" class="checkbox" />
+                                            <div class="knobs"></div>
+                                            <div class="layer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <label>Proposals</label>
+                                    <div class="toggle-button-cover">
+                                        <div class="button button-toggle">
+                                            <input type="checkbox" class="checkbox" />
+                                            <div class="knobs"></div>
+                                            <div class="layer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <label>Contracts</label>
+                                    <div class="toggle-button-cover">
+                                        <div class="button button-toggle">
+                                            <input type="checkbox" class="checkbox" />
+                                            <div class="knobs"></div>
+                                            <div class="layer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <label>Projects</label>
+                                    <div class="toggle-button-cover">
+                                        <div class="button button-toggle">
+                                            <input type="checkbox" class="checkbox" />
+                                            <div class="knobs"></div>
+                                            <div class="layer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="margin-top-25">E-Mail Notifications</h3>
+                            <div class="settings gridtwo">
+                                <div class="form-check">
+                                    <label>Invoices</label>
+                                    <div class="toggle-button-cover">
+                                        <div class="button button-toggle">
+                                            <input type="checkbox" class="checkbox" />
+                                            <div class="knobs"></div>
+                                            <div class="layer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <label>Project</label>
+                                    <div class="toggle-button-cover">
+                                        <div class="button button-toggle">
+                                            <input type="checkbox" class="checkbox" />
+                                            <div class="knobs"></div>
+                                            <div class="layer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <label>Task</label>
+                                    <div class="toggle-button-cover">
+                                        <div class="button button-toggle">
+                                            <input type="checkbox" class="checkbox" />
+                                            <div class="knobs"></div>
+                                            <div class="layer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <label>Contract</label>
+                                    <div class="toggle-button-cover">
+                                        <div class="button button-toggle">
+                                            <input type="checkbox" class="checkbox" />
+                                            <div class="knobs"></div>
+                                            <div class="layer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-footer">
+                            <div class="left">
+                            </div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit About Info Modal -->
+    <div class="modal fade" id="editaboutinfo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="editaboutinfoLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Info about Alysia Irwin</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form class="form_height">
+                        <div class="row">
+                            <div class="logo">
+                                <img src="../assets/images/photo.png" alt="logo">
+                                <a href="#"><span class="icon-plus"></span>Add Photo</a>
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" placeholder="Enter First Name" value="Alysia">
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Enter Last Name" value="Irwin">
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">Position</label>
+                                <input type="text" class="form-control" placeholder="Enter Position" value="CEO">
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" placeholder="Enter Phone Number">
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">E-Mail</label>
+                                <input type="email" class="form-control" placeholder="Enter E-Mail"
+                                    value="alysia_097@gmail.com">
+                            </div>
+                            <div class="form-input col-md-6">
+                                <label class="form-label">Contact Type</label>
+                                <select class="form-select">
+                                    <option>Primary</option>
+                                    <option>Employee</option>
+                                    <option>Coworker</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-footer">
+                            <div class="left">
+                            </div>
+                            <div class="right">
+                                <a href="javascript:void(0)" data-bs-target="#deletemodal" data-bs-toggle="modal">Delete
+                                    Contact</a>
+                                <button type="button" class="btn add-button">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- delete Modal -->
+    <div class="modal fade" id="deletemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="deletemodalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Customer</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <p>Are you sure that you want delete <b>Ava-May Watts?</b></p>
+                        <div class="form-footer">
+                            <div class="left"></div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Yes</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap-dataTable.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap-select.js"></script>
+    <script src="../assets/js/custom.js"></script>
+</body>
+
+</html>

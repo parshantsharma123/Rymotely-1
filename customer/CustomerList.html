@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer List</title>
+    <link rel="stylesheet" href="../assets/scss/dashboard.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-select.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-datatable.css">
+    <link rel="stylesheet" href="../assets/icons/icon.css">
+</head>
+
+<body class="_list_page">
+    <div class="main_section">
+        <nav class="active">
+            <ul>
+                <div class="logo"><span>Rymotely</span></div>
+                <li>
+                    <div class="dropdown workspace-dropdown">
+                        <a href="#" class="workspace dropdown-toggle" id="workspace_drp"
+                            data-bs-toggle="dropdown">Create Workspace<span class="icon-right"></span></a>
+                        <div class="dropdown-menu" aria-labelledby="workspace_drp">
+                            <a class="dropdown-item create_new" href="#"><span class="icon-plus"></span>Create New
+                                Workspace</a>
+                            <div class="dropdown-divider"></div>
+                            <span>
+                                <label>My Workspaces</label>
+                                <a class="dropdown-item" href="#">BRX Co</a>
+                                <a class="dropdown-item" href="#">Design Team</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Some Other Workspaces</a>
+                                <a class="dropdown-item" href="#">Some Other Workspaces</a>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../dashboard/Dashboard.html"><span class="icon icon-home"></span><span
+                            class="title">Dashboard</span></a></li>
+                <li><a href="./Customers.html"><span class="icon icon-customers"></span><span
+                            class="title">Customers</span></a></li>
+                <li><a href="#"><span class="icon icon-projects"></span><span class="title">Projects</span></a></li>
+                <li><a href="#"><span class="icon icon-tasks"></span><span class="title">Tasks</span></a></li>
+                <li><a href="#"><span class="icon icon-proposals"></span><span class="title">Proposals</span></a></li>
+                <li><a href="#"><span class="icon icon-invoices"></span><span class="title">Invoices</span></a></li>
+                <li><a href="#"><span class="icon icon-contracts"></span><span class="title">Contracts</span></a></li>
+                <li><a href="#"><span class="icon icon-accounting"></span><span class="title">Accounting</span></a></li>
+                <li><a href="#"><span class="icon icon-reports"></span><span class="title">Reports</span></a></li>
+            </ul>
+            <div class="plan-upgrade_view">
+                <div class="upgrade_content">
+                    <span class="icon_text">
+                        <span class="icon-award"></span>
+                        <p>Free month trial period will <b>expired 22.10.2021</b></p>
+                    </span>
+                    <button>Upgrade your plan</button>
+                </div>
+            </div>
+        </nav>
+        <div class="dashboard_content_wrapper">
+            <div class="mobile_header">
+                <div class="toggle">
+                    <img src="../assets/images/icons/hamburger.svg" alt="">
+                </div>
+                <h3>Dashboard</h3>
+            </div>
+            <div class="head box-shadow">
+                <a href="#" class="timer">Timer</a>
+                <div class="notification-message">
+
+                    <div class="dropdown create-dropdown">
+                        <button class="create-button dropdown-toggle" id="create_drp" data-bs-toggle="dropdown"><span
+                                class="icon icon-plus"></span> Create</button>
+                        <div class="dropdown-menu" aria-labelledby="create_drp">
+                            <a class="dropdown-item" href="#">Task</a>
+                            <a class="dropdown-item" href="#">Project</a>
+                            <a class="dropdown-item" href="#">Invoice</a>
+                            <a class="dropdown-item" href="#">Proposal</a>
+                            <a class="dropdown-item" href="#">Contract</a>
+                        </div>
+                    </div>
+
+                    <a class="head-icons mr-lg-2" id="messages" href="#">
+                        <span class="icon icon-chat"></span>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+                    </a>
+                    <div class="dropdown notification-dropdown">
+                        <a class="dropdown-toggle head-icons mr-lg-2" id="notification" href="#"
+                            data-bs-toggle="dropdown">
+                            <span class="icon icon-notifications"></span>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">7</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="notification">
+                            <h6 class="header_title">Notification<span class="badge rounded-pill">7 New</span>
+                            </h6>
+                            <a class="dropdown-item" href="#">
+                                <span class="icon icon-tasks"></span>
+                                <div class="notification-content">
+                                    <div class="title_time">
+                                        <span class="text"><strong>New Task “Design”</strong> - Project Name</span>
+                                        <span class="small time">11:21 AM</span>
+                                    </div>
+                                    <div class="by">by Jordana Jacobs</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <span class="icon icon-chat"></span>
+                                <div class="notification-content">
+                                    <div class="title_time">
+                                        <span class="text"><strong>New Comment</strong> for Project Name</span>
+                                        <span class="small time">Week ago</span>
+                                    </div>
+                                    <div class="by">by Corbin Farley</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown profile-dropdown">
+                        <a class="dropdown-toggle head-icons mr-lg-2" id="profile" href="#" data-bs-toggle="dropdown">
+                            <img src="../assets/images/profile.png" alt=""> <span class="icon icon-down"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="profile">
+
+                            <div class="dropdown language-dropdown">
+                                <span class="lang_text"><span class="icon icon-globe"></span> English</span>
+                                <a href="#" class="dropdown-toggle dropdown-toggle-split" id="language"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                                    <span class="icon icon-down"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="language">
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Arabic</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Spanish</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>French</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Turkish</a>
+                                </ul>
+                            </div>
+
+                            <a class="dropdown-item small" href="#"><span class="icon icon-profile"></span> My
+                                Profile</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-tasks"></span> My Plan</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-tasks"></span> Billing
+                                History</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-setting"></span> Settings</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-logout"></span> Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page_head margin-top-25">
+                <div class="page_title">
+                    <p>Customers</p>
+                </div>
+                <button data-bs-target="#addcustomer" data-bs-toggle="modal"><span class="icon icon-customers"></span>
+                    New Customer</button>
+            </div>
+
+            <div class="table_dataview_ table_withdata box-shadow margin-top-25">
+                <div class="table_head table_search_filters">
+                    <div class="search">
+                        <span class="icon icon-search"></span>
+                    </div>
+                    <div class="filters">
+                        <select class="selectpicker filterselect customer_filter">
+                            <option>All Customers</option>
+                            <option>Active Customers</option>
+                            <option>Inactive Customers</option>
+                            <option>Active Contacts</option>
+                            <option>Inactive Contacts</option>
+                            <option>Contacts Logged In Today</option>
+                        </select>
+                        <select class="selectpicker filterselect group_filter">
+                            <option>All Groups</option>
+                            <option>Design</option>
+                            <option>Marketing</option>
+                            <option>Development</option>
+                            <option>CEO</option>
+                        </select>
+                        <select class="selectpicker filterselect file_filter">
+                            <option>Export</option>
+                            <option>Excel</option>
+                            <option>PDF</option>
+                            <option>CVS</option>
+                            <option>Print</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table data_table_">
+                        <thead>
+                            <tr>
+                                <th class="column_width"><input type="checkbox" class="form-check-input" /></th>
+                                <th class="column_width">#</th>
+                                <th>Company</th>
+                                <th>Primary Contact</th>
+                                <th>Primary E-mail</th>
+                                <th>Phone Number</th>
+                                <th>Groups</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>1</td>
+                                <td><a href="./CustomerInfo.html" class="detail_link">BXR Co</a></td>
+                                <td>Joanne Green</td>
+                                <td><a href="mailto:city_stal@gmail.com">city_stal@gmail.com</a></td>
+                                <td>+598 765 43 21</td>
+                                <td>Design</td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="./CustomerInfo.html"><span
+                                                    class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a data-bs-target="#deletemodal" data-bs-toggle="modal"
+                                                class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>2</td>
+                                <td><a href="#" class="detail_link">Castillo Group</a></td>
+                                <td>Alysia Irwin</td>
+                                <td><a href="mailto:city_stal@gmail.com">castillo09@gmail.com</a></td>
+                                <td>+898 512 00 77</td>
+                                <td>Marketing</td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>3</td>
+                                <td><a href="#" class="detail_link">Finley</a></td>
+                                <td>Constance Hooper</td>
+                                <td><a href="mailto:city_stal@gmail.com">finleyco@gmail.com</a></td>
+                                <td>+108 980 77 55</td>
+                                <td>Develop</td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>4</td>
+                                <td><a href="#" class="detail_link">Ava-May Watts</a></td>
+                                <td>Bilaal Moran</td>
+                                <td><a href="mailto:city_stal@gmail.com">amw@gmail.com</a></td>
+                                <td>+598 765 43 21</td>
+                                <td>Design</td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>5</td>
+                                <td><a href="#" class="detail_link">Castillo Group</a></td>
+                                <td>Alysia Irwin</td>
+                                <td><a href="mailto:city_stal@gmail.com">castillo09@gmail.com</a></td>
+                                <td>+898 512 00 77</td>
+                                <td>Marketing</td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>6</td>
+                                <td><a href="#" class="detail_link">Finley</a></td>
+                                <td>Constance Hooper</td>
+                                <td><a href="mailto:city_stal@gmail.com">finleyco@gmail.com</a></td>
+                                <td>+108 980 77 55</td>
+                                <td>Develop</td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="#"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Customer Modal -->
+    <div class="modal fade" id="addcustomer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="addcustomerLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Customer</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Company Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Company Name">
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">VAT Number</label>
+                            <input type="text" class="form-control" placeholder="Enter Number">
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Company Website</label>
+                            <input type="text" class="form-control" placeholder="Website">
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Group</label>
+                            <select class="form-select">
+                                <option selected>Select</option>
+                                <option>Design</option>
+                                <option>Marketing</option>
+                                <option>Development</option>
+                                <option>SEO</option>
+                            </select>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Company Address</label>
+                            <input type="text" class="form-control" placeholder="Enter Address">
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Currency</label>
+                            <select class="form-select">
+                                <option selected>Choose</option>
+                                <option>USD</option>
+                                <option>EURO</option>
+                            </select>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Contact Name</label>
+                            <input type="text" class="form-control" placeholder="Enter First and Last Name">
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Contact Type</label>
+                            <select class="form-select">
+                                <option selected>Select</option>
+                                <option>Primary</option>
+                                <option>Employee</option>
+                                <option>Coworker</option>
+                            </select>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Position</label>
+                            <input type="text" class="form-control" placeholder="Position of contact">
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Phone</label>
+                            <input type="text" class="form-control" placeholder="Enter Phone">
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Enter Email">
+                        </div>
+                        <div class="form-input col-12">
+                            <label class="form-label">Notes</label>
+                            <textarea class="form-control" placeholder="Enter some notes about customer"></textarea>
+                        </div>
+                        <div class="form-footer">
+                            <div class="left"></div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- delete Modal -->
+    <div class="modal fade" id="deletemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="deletemodalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Customer</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <p>Are you sure that you want delete <b>Ava-May Watts?</b></p>
+                        <div class="form-footer">
+                            <div class="left"></div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Yes</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap-dataTable.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap-select.js"></script>
+    <script src="../assets/js/custom.js"></script>
+</body>
+
+</html>

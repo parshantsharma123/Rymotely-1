@@ -1,0 +1,23 @@
+jQuery('.filterselect').selectpicker();
+jQuery(document).ready(function () {
+    jQuery('.data_table_').DataTable(
+        { searching: false, info: false, bLengthChange: false, }
+    );
+});
+
+jQuery(document).ready(function () {
+    jQuery('.dropdown .dropdown-menu').on({
+        "click": function (e) {
+            e.stopPropagation();
+        }
+    });
+});
+
+var getSidebar = document.querySelector('nav');
+var getToggle = document.getElementsByClassName('toggle');
+for (var i = 0; i <= getToggle.length; i++) {
+    getToggle[i].addEventListener('click', function () {
+        getSidebar.classList.toggle('active');
+    });
+}
+

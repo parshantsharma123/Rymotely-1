@@ -1,0 +1,80 @@
+@import "../utilities//main.scss";
+
+.authentication_page {
+  .vh_style {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: $space_149;
+    padding-bottom: $space_60 + 3px;
+    .auth_form {
+      width: 400px;
+      max-width: 400px;
+      margin: 0 auto;
+      .logo {
+        h3,
+        h2 {
+          @include form_title;
+          font-size: $font_size_22;
+          color: $color_475462;
+          margin-bottom: $space_40;
+        }
+      }
+      .authentication_view {
+        h2 {
+          @include form_title;
+          font-size: $font_size_32;
+          color: $color_4B64A4;
+          margin-bottom: $space_60;
+        }
+        form {
+          label {
+            @include label_text;
+            line-height: $line_height_21;
+            letter-spacing: $letter-spacing_2;
+            a {
+              color: $color_5C616C;
+            }
+          }
+          .label_input {
+            margin-bottom: 16px;
+            label {
+              margin-bottom: 5px;
+              line-height: $line_height_18;
+              letter-spacing: normal;
+            }
+            input, select {
+              height: $height_44;
+            }
+          }
+          .remember_forgot {
+            margin-bottom: $space_25;
+            @include flex_between;
+          }
+          .submit_button {
+            @include blue_button;
+            margin-bottom: $space_25;
+          }
+        }
+      }
+    }
+    .register_text,
+    .term_privacy {
+      p {
+        @include label_text;
+        line-height: $line_height_21;
+        letter-spacing: $letter-spacing_2;
+        margin: 0px;
+        a {
+          color: $color_4B64A4;
+        }
+      }
+    }
+  }
+  &.signup_page {
+    .vh_style {
+      padding-bottom: $space_40 - 2px;
+    }
+  }
+}
