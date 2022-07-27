@@ -1,1 +1,400 @@
-/* No CSS *//*# sourceMappingURL=project.css.map */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+body {
+  font-family: "DM Sans" !important;
+  /* Button 1 */
+}
+
+body a {
+  text-decoration: none !important;
+}
+
+body .form-control,
+body .form-select {
+  border: 1px solid #dbdbdb !important;
+  color: #9fa6b3 !important;
+  font-size: 14px !important;
+}
+
+body .form-control:focus,
+body .form-select:focus,
+body .form-check-input:focus,
+body .form-check-input:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+body .form-check-input {
+  font-size: 16px;
+  border: 2px solid #b4bbc3;
+}
+
+body .form-check-input:focus {
+  border-color: #b4bbc3;
+}
+
+body .form-check-input:checked {
+  background-color: #4b64a4 !important;
+  border-color: #4b64a4 !important;
+}
+
+body ::-webkit-input-placeholder {
+  color: #b4bbc3 !important;
+}
+
+body :-ms-input-placeholder {
+  color: #b4bbc3 !important;
+}
+
+body ::-ms-input-placeholder {
+  color: #b4bbc3 !important;
+}
+
+body ::placeholder {
+  color: #b4bbc3 !important;
+}
+
+body .margin-top-25 {
+  margin-top: 25px;
+}
+
+body .box-shadow {
+  -webkit-box-shadow: 0px 4px 20px rgba(60, 60, 60, 0.1);
+          box-shadow: 0px 4px 20px rgba(60, 60, 60, 0.1);
+}
+
+body input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url(../images/icons/calender.svg) no-repeat;
+  background-size: 16px;
+}
+
+body select {
+  background: url(../images/icons/down.svg) no-repeat !important;
+  background-position: right 12px center !important;
+}
+
+body .form-control:disabled {
+  background: transparent;
+}
+
+body .form-check {
+  padding: 0px;
+}
+
+body .form-check .form-check-input {
+  margin-left: 0px;
+}
+
+body .form-check .form-check-label {
+  line-height: 24px;
+  margin-left: 8px;
+}
+
+body .toggle-button-cover {
+  display: table-cell;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .toggle-button-cover .button-toggle.button {
+  position: relative;
+  top: 50%;
+  width: 42px;
+  height: 24px;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+body .toggle-button-cover .button-toggle .checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+body .toggle-button-cover .button-toggle .checkbox:checked + .knobs:before {
+  content: "";
+  left: 19px;
+  background-color: #ffffff;
+}
+
+body .toggle-button-cover .button-toggle .checkbox:checked ~ .layer {
+  background-color: #28C76F;
+}
+
+body .toggle-button-cover .button-toggle .knobs {
+  z-index: 2;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body .toggle-button-cover .button-toggle .knobs:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  -webkit-transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+body .toggle-button-cover .button-toggle .layer {
+  width: 100%;
+  background-color: #b4bbc3;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  z-index: 1;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#addmember .modal-dialog {
+  max-width: 450px;
+}
+
+#addmember .modal-dialog .modal-content .modal-header {
+  padding: 20px;
+}
+
+#addmember .modal-dialog .modal-content hr {
+  background-color: #ebeff2;
+  opacity: 1;
+}
+
+#addmember .modal-dialog .modal-content .am {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ebeff2;
+  border-radius: 6px;
+  margin: 20px;
+}
+
+#addmember .modal-dialog .modal-content .mn {
+  width: 100%;
+}
+
+#addmember .modal-dialog .modal-content .mn img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 12px;
+}
+
+#addmember .modal-dialog .modal-content .mn h4 {
+  font-weight: 500;
+  color: #5381E9;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+#addmember .modal-dialog .modal-content .mn h6 {
+  font-weight: 400;
+  color: #98A3B2;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+#addmember .modal-dialog .modal-content .am h5 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.1px;
+  color: #475462;
+}
+
+#addmember .modal-dialog .modal-content .am span.icon {
+  font-size: 16px;
+  color: #b4bbc3;
+}
+
+#addmember .modal-dialog .modal-content .form-footer {
+  margin: 20px;
+}
+
+#addmember .modal-dialog .modal-content span.btn-close {
+  right: 12px;
+  position: relative;
+}
+
+#stardate .modal-dialog {
+  max-width: 450px;
+}
+
+#stardate .modal-dialog .modal-content .modal-header {
+  padding: 20px;
+}
+
+#stardate .modal-dialog .modal-content hr {
+  background-color: #ebeff2;
+  opacity: 1;
+}
+
+#stardate .modal-dialog .modal-content .form-footer {
+  margin: 20px;
+}
+
+#stardate .modal-dialog .modal-content span.btn-close {
+  right: 12px;
+  position: relative;
+}
+
+.project_dashboard .tags {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5c616c;
+}
+
+.project_dashboard hr {
+  background-color: #ebeff2;
+  opacity: 1;
+}
+
+.project_info_view p.des {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.1px;
+  color: #475462;
+  margin: 0px;
+}
+
+.project_info_view .image ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project_info_view .image ul li {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  overflow: hidden;
+  background: #ddf4ed;
+  margin-right: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project_info_view .innerdata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project_info_view .innerdata .info_data {
+  width: 50%;
+}
+
+.project_info_view .innerdata .sp {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 25px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.project_info_view .innerdata .sp .status_progress {
+  margin-right: 40px;
+}
+
+.project_info_view .innerdata .image ul li {
+  margin-left: -15px;
+  margin-right: 0px;
+}
+
+.project_info_view .pinfo {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.project_info_view .pinfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 0;
+  padding-right: 80px;
+}
+
+.project_info_view .pinfo li {
+  list-style-type: none;
+}
+
+.project_info_view .pinfo li b {
+  display: block;
+}
+
+.project_info_view .pinfo span {
+  font-size: 14px;
+  color: #475462;
+  opacity: 0.5;
+}
+
+.project_info_view .notes {
+  padding: 0px 25px 25px 25px !important;
+}
+
+.project_info_view .notes .notes_info {
+  margin-bottom: 0px !important;
+}
+/*# sourceMappingURL=project.css.map */

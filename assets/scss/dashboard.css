@@ -374,7 +374,28 @@ nav .plan-upgrade_view .upgrade_content button:focus {
 .dashboard_content_wrapper {
   padding-left: 284px;
   padding-top: 16px;
-  padding-right: 25px;
+}
+
+.dashboard_content_wrapper .status_progress {
+  text-align: center;
+}
+
+.dashboard_content_wrapper .status_progress select {
+  border: 1px solid #5381E9 !important;
+  letter-spacing: 0.1px;
+  color: #5381E9 !important;
+  font-size: 13px !important;
+  line-height: 17px;
+  font-weight: 400;
+  padding: 4px 10px;
+  border-radius: 15px;
+  min-width: 105px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  background-size: 8px !important;
+  background-color: rgba(83, 129, 233, 0.12) !important;
 }
 
 .dashboard_content_wrapper .head {
@@ -986,28 +1007,6 @@ nav .plan-upgrade_view .upgrade_content button:focus {
           justify-content: center;
 }
 
-.dashboard_content_wrapper .table_dataview_ table tr .status_progress {
-  text-align: center;
-}
-
-.dashboard_content_wrapper .table_dataview_ table tr .status_progress select {
-  border: 1px solid #4b8abd !important;
-  letter-spacing: 0.1px;
-  color: #005f99 !important;
-  font-size: 13px !important;
-  line-height: 17px;
-  font-weight: 400;
-  padding: 4px 10px;
-  border-radius: 15px;
-  min-width: 105px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  background-size: 8px !important;
-  background-color: rgba(83, 129, 233, 0.12) !important;
-}
-
 .dashboard_content_wrapper .table_dataview_ table tr .dots .dropdown-toggle:after {
   display: none;
 }
@@ -1173,6 +1172,8 @@ nav .plan-upgrade_view .upgrade_content button:focus {
   letter-spacing: 0.54px;
   color: #203864;
   margin: 0px;
+  border-bottom: 1px solid #98A3B2;
+  padding-bottom: 40px;
 }
 
 ._add_page .customerpage_view .customerpage_data .add_customer {

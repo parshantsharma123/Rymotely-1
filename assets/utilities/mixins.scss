@@ -98,7 +98,7 @@
   line-height: $line_height_40;
   letter-spacing: $letter-spacing;
 }
-@mixin flex_between {
+@mixin flex_between { 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -119,4 +119,9 @@
 @mixin flex_start {
   display: flex;
   align-items: baseline;
+}
+@mixin flex_start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }

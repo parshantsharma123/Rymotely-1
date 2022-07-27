@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List</title>
+    <link rel="stylesheet" href="../assets/scss/dashboard.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-select.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-datatable.css">
+    <link rel="stylesheet" href="../assets/icons/icon.css">
+    <link rel="stylesheet" href="../assets/scss/project.css">
+</head>
+
+<body class="_list_page">
+    <div class="main_section">
+        <nav class="active">
+            <ul>
+                <div class="logo"><span>Rymotely</span></div>
+                <li>
+                    <div class="dropdown workspace-dropdown">
+                        <a href="#" class="workspace dropdown-toggle" id="workspace_drp"
+                            data-bs-toggle="dropdown">Create Workspace<span class="icon-right"></span></a>
+                        <div class="dropdown-menu" aria-labelledby="workspace_drp">
+                            <a class="dropdown-item create_new" href="#"><span class="icon-plus"></span>Create New
+                                Workspace</a>
+                            <div class="dropdown-divider"></div>
+                            <span>
+                                <label>My Workspaces</label>
+                                <a class="dropdown-item" href="#">BRX Co</a>
+                                <a class="dropdown-item" href="#">Design Team</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Some Other Workspaces</a>
+                                <a class="dropdown-item" href="#">Some Other Workspaces</a>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../dashboard/Dashboard.html"><span class="icon icon-home"></span><span
+                            class="title">Dashboard</span></a></li>
+                <li><a href="./Customers.html"><span class="icon icon-customers"></span><span
+                            class="title">Customers</span></a></li>
+                <li><a href="#"><span class="icon icon-projects"></span><span class="title">Projects</span></a></li>
+                <li><a href="#"><span class="icon icon-tasks"></span><span class="title">Tasks</span></a></li>
+                <li><a href="#"><span class="icon icon-proposals"></span><span class="title">Proposals</span></a></li>
+                <li><a href="#"><span class="icon icon-invoices"></span><span class="title">Invoices</span></a></li>
+                <li><a href="#"><span class="icon icon-contracts"></span><span class="title">Contracts</span></a></li>
+                <li><a href="#"><span class="icon icon-accounting"></span><span class="title">Accounting</span></a></li>
+                <li><a href="#"><span class="icon icon-reports"></span><span class="title">Reports</span></a></li>
+            </ul>
+            <div class="plan-upgrade_view">
+                <div class="upgrade_content">
+                    <span class="icon_text">
+                        <span class="icon-award"></span>
+                        <p>Free month trial period will <b>expired 22.10.2021</b></p>
+                    </span>
+                    <button>Upgrade your plan</button>
+                </div>
+            </div>
+        </nav>
+        <div class="dashboard_content_wrapper">
+            <div class="mobile_header">
+                <div class="toggle">
+                    <img src="../assets/images/icons/hamburger.svg" alt="">
+                </div>
+                <h3>Dashboard</h3>
+            </div>
+            <div class="head box-shadow">
+                <a href="#" class="timer">Timer</a>
+                <div class="notification-message">
+
+                    <div class="dropdown create-dropdown">
+                        <button class="create-button dropdown-toggle" id="create_drp" data-bs-toggle="dropdown"><span
+                                class="icon icon-plus"></span> Create</button>
+                        <div class="dropdown-menu" aria-labelledby="create_drp">
+                            <a class="dropdown-item" href="#">Task</a>
+                            <a class="dropdown-item" href="#">Project</a>
+                            <a class="dropdown-item" href="#">Invoice</a>
+                            <a class="dropdown-item" href="#">Proposal</a>
+                            <a class="dropdown-item" href="#">Contract</a>
+                        </div>
+                    </div>
+
+                    <a class="head-icons mr-lg-2" id="messages" href="#">
+                        <span class="icon icon-chat"></span>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+                    </a>
+                    <div class="dropdown notification-dropdown">
+                        <a class="dropdown-toggle head-icons mr-lg-2" id="notification" href="#"
+                            data-bs-toggle="dropdown">
+                            <span class="icon icon-notifications"></span>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">7</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="notification">
+                            <h6 class="header_title">Notification<span class="badge rounded-pill">7 New</span>
+                            </h6>
+                            <a class="dropdown-item" href="#">
+                                <span class="icon icon-tasks"></span>
+                                <div class="notification-content">
+                                    <div class="title_time">
+                                        <span class="text"><strong>New Task “Design”</strong> - Project Name</span>
+                                        <span class="small time">11:21 AM</span>
+                                    </div>
+                                    <div class="by">by Jordana Jacobs</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <span class="icon icon-chat"></span>
+                                <div class="notification-content">
+                                    <div class="title_time">
+                                        <span class="text"><strong>New Comment</strong> for Project Name</span>
+                                        <span class="small time">Week ago</span>
+                                    </div>
+                                    <div class="by">by Corbin Farley</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown profile-dropdown">
+                        <a class="dropdown-toggle head-icons mr-lg-2" id="profile" href="#" data-bs-toggle="dropdown">
+                            <img src="../assets/images/profile.png" alt=""> <span class="icon icon-down"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="profile">
+
+                            <div class="dropdown language-dropdown">
+                                <span class="lang_text"><span class="icon icon-globe"></span> English</span>
+                                <a href="#" class="dropdown-toggle dropdown-toggle-split" id="language"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                                    <span class="icon icon-down"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="language">
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Arabic</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Spanish</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>French</a>
+                                    <a class="dropdown-item small" href="#"><span class="icon"></span>Turkish</a>
+                                </ul>
+                            </div>
+
+                            <a class="dropdown-item small" href="#"><span class="icon icon-profile"></span> My
+                                Profile</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-tasks"></span> My Plan</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-tasks"></span> Billing
+                                History</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-setting"></span> Settings</a>
+                            <a class="dropdown-item small" href="#"><span class="icon icon-logout"></span> Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page_head margin-top-25">
+                <div class="page_title">
+                    <p>Projects</p>
+                </div>
+                <button data-bs-target="#addproject" data-bs-toggle="modal"><span class="icon icon-projects"></span>
+                    New Projects</button>
+            </div>
+
+
+            <div class="table_dataview_ table_withdata box-shadow margin-top-25">
+                <div class="table_head table_search_filters">
+                    <div class="search">
+                        <span class="icon icon-search"></span>
+                    </div>
+                    <div class="filters">
+                        <select class="selectpicker filterselect customer_filter">
+                            <option>All Statuses</option>
+                            <option>All Statuses (6)</option>
+                            <option>Testing (5)</option>
+                            <option>Not started (1) </option>
+                            <option>In Progress (6)</option>
+                            <option>Awaiting Feedback (0)</option>
+                            <option>Complete (0)</option>
+                        </select>
+
+                        <select class="selectpicker filterselect file_filter">
+                            <option>Export</option>
+                            <option>Excel</option>
+                            <option>PDF</option>
+                            <option>CVS</option>
+                            <option>Print</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table data_table_">
+                        <thead>
+                            <tr>
+
+                                <th class="column_width">#</th>
+                                <th>Project Name</th>
+                                <th>Customer</th>
+                                <th>Tags</th>
+                                <th>Start Date</th>
+                                <th>Deadline</th>
+                                <th>Members</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>1</td>
+                                <td><a href="project_dashboard.html" class="detail_link">Project Name </a></td>
+                                <td>City Stal</td>
+                                <td><u>No tags</u></td>
+                                <td><a href="#" data-bs-target="#stardate" data-bs-toggle="modal"><u>Set up Start Date</u></a></td>
+                                <td>17/09/2021</td>
+                                <td><a href="#" data-bs-target="#addmember" data-bs-toggle="modal"><u>Select
+                                            Members</u></a></td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">No Status</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="./CustomerInfo.html"><span
+                                                    class="icon icon-edit"></span>
+                                                Copy</a>
+                                            <a class="dropdown-item" href="./CustomerInfo.html"><span
+                                                    class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a data-bs-target="#deletemodal" data-bs-toggle="modal"
+                                                class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>2</td>
+                                <td><a href="#" class="detail_link">Project Name 1</a></td>
+                                <td>Castillo Group</td>
+                                <td><u>tags</u></td>
+                                <td>18/10/2021</td>
+                                <td>18/10/2021</td>
+                                <td class="image">
+                                    <ul>
+                                        <li><img src="../assets/images/profile.png"></li>
+                                        <li><span>RS</span></li>
+                                    </ul>
+                                </td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">No Status</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="./CustomerInfo.html"><span
+                                                    class="icon icon-edit"></span>
+                                                Copy</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>3</td>
+                                <td><a href="#" class="detail_link">Project Name 2</a></td>
+                                <td>Finley</td>
+                                <td><u>tags</u></td>
+                                <td>12/06/2021</td>
+                                <td>12/06/2021</td>
+                                <td class="image">
+                                    <ul>
+                                        <li><img src="../assets/images/profile.png"></li>
+                                        <li><span>RS</span></li>
+                                    </ul>
+                                </td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">No Status</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="./CustomerInfo.html"><span
+                                                    class="icon icon-edit"></span>
+                                                Copy</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>4</td>
+                                <td><a href="#" class="detail_link">Project Name 3</a></td>
+                                <td>ava-May Watts</td>
+                                <td><u>tags</u></td>
+                                <td>23/01/2021</td>
+                                <td>23/01/2021</td>
+                                <td class="image">
+                                    <ul>
+                                        <li><img src="../assets/images/profile.png"></li>
+                                        <li><span>RS</span></li>
+                                    </ul>
+                                </td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">No Status</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="./CustomerInfo.html"><span
+                                                    class="icon icon-edit"></span>
+                                                Copy</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>5</td>
+                                <td><a href="#" class="detail_link">Project Name 4</a></td>
+                                <td>Castillo Group</td>
+                                <td><u>tags</u></td>
+                                <td>13/09/2021</td>
+                                <td>13/09/2021</td>
+                                <td class="image">
+                                    <ul>
+                                        <li><img src="../assets/images/profile.png"></li>
+                                        <li><span>RS</span></li>
+                                    </ul>
+                                </td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">No Status</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="./CustomerInfo.html"><span
+                                                    class="icon icon-edit"></span>
+                                                Copy</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>6</td>
+                                <td><a href="#" class="detail_link">Project Name 5</a></td>
+                                <td>Constantine Finely</td>
+                                <td><u>tags</u></td>
+                                <td>11/11/2021</td>
+                                <td>11/11/2021</td>
+                                <td class="image">
+                                    <ul>
+                                        <li><img src="../assets/images/profile.png"></li>
+                                        <li><span>RS</span></li>
+                                    </ul>
+                                </td>
+                                <td class="status_progress">
+                                    <select class="form-select" aria-label="Default select">
+                                        <option value="progerss">In Progerss</option>
+                                        <option value="pending">No Status</option>
+                                    </select>
+                                </td>
+                                <td class="dots text-end">
+                                    <div class="dropdown dropstart">
+                                        <a class="dropdown-toggle" id="dlt_edit" href="#"
+                                            data-bs-toggle="dropdown"><span class="icon-dots"></span></a>
+                                        <div class="dropdown-menu" aria-labelledby="dlt_edit">
+                                            <a class="dropdown-item" href="./CustomerInfo.html"><span
+                                                    class="icon icon-edit"></span>
+                                                Copy</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-edit"></span>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#"><span class="icon icon-trash"></span>
+                                                Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Add Customer Modal -->
+    <div class="modal fade" id="addproject" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="addcustomerLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Project</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <div class="form-input col-md-12">
+                            <label class="form-label">Project Name</label>
+                            <input type="text" class="form-control" placeholder="Project Name">
+                        </div>
+
+                        <div class="form-input col-md-12">
+                            <label class="form-label">Project Description</label>
+                            <textarea class="form-control" placeholder="Enter some project description"></textarea>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Customer</label>
+                            <select class="form-select">
+                                <option selected>Select customer or add new one</option>
+                                <option>Select customer or add new one</option>
+                                <option>Select customer or add new one</option>
+                                <option>Select customer or add new one</option>
+                                <option>Select customer or add new one</option>
+                            </select>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Members</label>
+                            <select class="form-select">
+                                <option selected>Select members for this project</option>
+                                <option>Select members for this project</option>
+                                <option>Select members for this project</option>
+                                <option>Select members for this project</option>
+                                <option>Select members for this project</option>
+                            </select>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Start Date</label>
+                            <div class="input-group startdate">
+                                <input type="date" class="form-control" placeholder="Start Date">
+                            </div>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Due Date</label>
+                            <input type="date" class="form-control" placeholder="Start Date">
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Status</label>
+                            <select class="form-select">
+                                <option selected>Select Status</option>
+                                <option>Select Status</option>
+                                <option>Select Status</option>
+                                <option>Select Status</option>
+                            </select>
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Billing Type</label>
+                            <select class="form-select">
+                                <option selected>Select Type</option>
+                                <option>Select Type</option>
+                                <option>Select Type</option>
+                                <option>Select Type</option>
+                            </select>
+                        </div>
+
+                        <div class="form-footer">
+                            <div class="left">
+                                <a href="#" data-bs-target="#projectsetting" data-bs-toggle="modal"
+                                    data-bs-dismiss="modal">Project Settings</a>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="createemail">
+                                    <label class="form-check-label" for="createemail">Send project created
+                                        e-mail</label>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--Select member-->
+    <div class="modal fade" id="addmember" data-bs-backdrop="static" aria-hidden="true"
+        aria-labelledby="projectsettinglabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-0">
+                <div class="modal-header mb-0">
+                    <h5 class="modal-title">Project Members</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <hr class="m-0">
+                <div class="modal-body">
+                    <form>
+                    <div class="am box-shadow">
+                        <h5 class="mb-0">Add new member</h5>
+                        <a href=""><span class="icon icon-plus"></span> </a>
+                    </div>
+
+                    <hr class="m-0">
+
+                    <div class="am box-shadow">
+                        <div class="mn">
+                            <img src="../assets/images/profile.png">
+                            <h4 class="mb-0">Joanne Green</h4>
+                            <h6 class="mb-0">CEO</h6>
+                        </div>
+                        <a href=""><span class="icon icon-trash"></span> </a>
+                    </div>
+
+                    <div class="am box-shadow">
+                        <div class="mn">
+                            <img src="../assets/images/profile.png">
+                            <h4 class="mb-0">Joanne Green</h4>
+                            <h6 class="mb-0">CEO</h6>
+                        </div>
+                        <a href=""><span class="icon icon-trash"></span> </a>
+                    </div>
+
+                    <hr class="mb-0">
+
+                    <div class="form-footer">
+                        <div class="left">
+                        </div>
+
+                        <div class="right">
+                            <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                            <button type="button" class="btn add-button">Save</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!--member-close-->
+<!--calender-->
+<div class="modal fade" id="stardate" data-bs-backdrop="static" aria-hidden="true"
+        aria-labelledby="projectsettinglabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-0">
+                <div class="modal-header mb-0">
+                    <h5 class="modal-title">Change Date</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <hr class="m-0">
+                <div class="modal-body">
+                    <form>
+                
+                        <div class="app">
+                            <div class="app__main">
+                                    <div class="calendar">
+                                            <div id="calendar"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    <hr class="mb-0">
+
+                    <div class="form-footer">
+                        <div class="left">
+                        </div>
+
+                        <div class="right">
+                            <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Close</a>
+                            <button type="button" class="btn add-button">Save</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Project Setting Modal -->
+    <div class="modal fade permissions" id="projectsetting" data-bs-backdrop="static" aria-hidden="true"
+        aria-labelledby="projectsettinglabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="javascript:void(0)" class="back_icon" data-bs-target="#addproject" data-bs-toggle="modal"
+                        data-bs-dismiss="modal"><span class="icon icon-back"></span></a>
+                    <h5 class="modal-title">Project Settings</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <h3>Allow Customer To View</h3>
+                        <div class="settings gridthree">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="task">
+                                <label class="form-check-label" for="task">Task</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checklist">
+                                <label class="form-check-label" for="checklist">Task Checklist Items</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="timesheets">
+                                <label class="form-check-label" for="timesheets">Timesheets</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="comments">
+                                <label class="form-check-label" for="comments">Task Comments</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="loggedtime">
+                                <label class="form-check-label" for="loggedtime">Task Total Logged Time</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="activitylog">
+                                <label class="form-check-label" for="activitylog">Activity Log</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="attachments">
+                                <label class="form-check-label" for="attachments">Task Attachments</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="finance">
+                                <label class="form-check-label" for="finance">Finance Overview</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="teammembers">
+                                <label class="form-check-label" for="teammembers">Team Members</label>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <h3>Allow Customer To</h3>
+                        <div class="settings gridtwo">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="createtasks">
+                                <label class="form-check-label" for="createtasks">Create Tasks</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="uploadfiles">
+                                <label class="form-check-label" for="uploadfiles">Upload Files</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="edittasks">
+                                <label class="form-check-label" for="edittasks">Edit Tasks (only tasks created from
+                                    contact)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="hideproject">
+                                <label class="form-check-label" for="hideproject">Hide project tasks</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="taskcomment">
+                                <label class="form-check-label" for="taskcomment">Comment on project tasks</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="uploadattachments">
+                                <label class="form-check-label" for="uploadattachments">Upload Attachments On
+                                    Tasks</label>
+                            </div>
+                        </div>
+
+                        <div class="form-footer">
+                            <div class="left">
+                            </div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- delete Modal -->
+    <div class="modal fade" id="deletemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="deletemodalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Customer</h5>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body">
+                    <form class="row">
+                        <p>Are you sure that you want delete project<b> “Project Name 1”?</b></p>
+                        <div class="form-footer">
+                            <div class="left"></div>
+                            <div class="right">
+                                <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                                <button type="button" class="btn add-button">Yes</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap-dataTable.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap-select.js"></script>
+    <script src="../assets/js/custom.js"></script>
+</body>
+
+</html>

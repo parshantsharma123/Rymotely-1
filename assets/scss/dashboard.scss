@@ -1,4 +1,4 @@
-@import "../utilities//main.scss";
+@import "../utilities/main.scss";
 
 nav {
   position: fixed;
@@ -146,7 +146,24 @@ nav {
 .dashboard_content_wrapper {
   padding-left: $space_60 * 4 + 44px;
   padding-top: $space_16;
-  padding-right: $space_25;
+  .status_progress {
+    text-align: center;
+    select {
+      border: 1px solid $color_5381E9 !important;
+      letter-spacing: $letter-spacing;
+      color: $color_5381E9 !important;
+      font-size: $font_size_13 !important;
+      line-height: $line_height_17;
+      font-weight: $font_weight_400;
+      padding: 4px 10px;
+      border-radius: $border-radius_24 - 9px;
+      min-width: 105px;
+      width: fit-content;
+      margin: 0 auto;
+      background-size: 8px !important;
+      background-color: rgba(83, 129, 233, 0.12) !important;
+    }
+  }
   .head {
     @include flex_between;
     padding: $space_16 - 5px $space_25 + 1px;
@@ -541,24 +558,6 @@ nav {
             }
           }
         }
-        .status_progress {
-          text-align: center;
-          select {
-            border: 1px solid $color_4B8ABD !important;
-            letter-spacing: $letter-spacing;
-            color: $color_005F99 !important;
-            font-size: $font_size_13 !important;
-            line-height: $line_height_17;
-            font-weight: $font_weight_400;
-            padding: 4px 10px;
-            border-radius: $border-radius_24 - 9px;
-            min-width: 105px;
-            width: fit-content;
-            margin: 0 auto;
-            background-size: 8px !important;
-            background-color: rgba(83, 129, 233, 0.12) !important;
-          }
-        }
         .dots {
           .dropdown-toggle {
             &:after {
@@ -706,6 +705,8 @@ nav {
         letter-spacing: 0.54px;
         color: $color_203864;
         margin: 0px;
+        border-bottom:1px solid $color_98A3B2;
+        padding-bottom: $space_40;
       }
       .add_customer {
         display: flex;

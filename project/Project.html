@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../assets/icons/icon.css">
 </head>
 
-<body class="_project_page">
+<body class="_add_page">
     <div class="main_section">
         <nav class="active">
             <ul>
@@ -152,13 +152,14 @@
 
             <div class="customerpage_view margin-top-25">
                 <div class="customerpage_data">
-                    <h3>Customers</h3>
+                    <h3>Projects</h3>
+                  
                     <div class="add_customer">
-                        <h5>Welcome to your Customers list!</h5>
-                        <h2>Add Your First Customer</h2>
+                        <h5>Welcome to your first Project!</h5>
+                        <h2>Add Your First Project</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                         <button data-bs-target="#addcustomer" data-bs-toggle="modal"><span
-                                class="icon icon-customers"></span> Add Customer</button>
+                                class="icon icon-customers"></span> Add Project</button>
                     </div>
                 </div>
             </div>
@@ -172,76 +173,78 @@
         <div class="modal-dialog  modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add Customer</h5>
+                    <h5 class="modal-title">Add Project</h5>
                     <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
                 </div>
                 <div class="modal-body">
                     <form class="row">
-                        <div class="form-input col-md-6">
-                            <label class="form-label">Company Name</label>
-                            <input type="text" class="form-control" placeholder="Enter Company Name">
+                        <div class="form-input col-md-12">
+                            <label class="form-label">Project Name</label>
+                            <input type="text" class="form-control" placeholder="Project Name">
+                        </div>
+                      
+                        <div class="form-input col-md-12">
+                            <label class="form-label">Project Description</label>
+                            <textarea class="form-control" placeholder="Enter some project description"></textarea>
                         </div>
                         <div class="form-input col-md-6">
-                            <label class="form-label">VAT Number</label>
-                            <input type="text" class="form-control" placeholder="Enter Number">
-                        </div>
-                        <div class="form-input col-md-6">
-                            <label class="form-label">Company Website</label>
-                            <input type="text" class="form-control" placeholder="Website">
-                        </div>
-                        <div class="form-input col-md-6">
-                            <label class="form-label">Group</label>
+                            <label class="form-label">Customer</label>
                             <select class="form-select">
-                                <option selected>Select</option>
-                                <option>Design</option>
-                                <option>Marketing</option>
-                                <option>Development</option>
-                                <option>SEO</option>
+                                <option selected>Select customer or add new one</option>
+                                <option>Select customer or add new one</option>
+                                <option>Select customer or add new one</option>
+                                <option>Select customer or add new one</option>
+                                <option>Select customer or add new one</option>
                             </select>
                         </div>
                         <div class="form-input col-md-6">
-                            <label class="form-label">Company Address</label>
-                            <input type="text" class="form-control" placeholder="Enter Address">
-                        </div>
-                        <div class="form-input col-md-6">
-                            <label class="form-label">Currency</label>
+                            <label class="form-label">Members</label>
                             <select class="form-select">
-                                <option selected>Choose</option>
-                                <option>USD</option>
-                                <option>EURO</option>
+                                <option selected>Select members for this project</option>
+                                <option>Select members for this project</option>
+                                <option>Select members for this project</option>
+                                <option>Select members for this project</option>
+                                <option>Select members for this project</option>
                             </select>
                         </div>
                         <div class="form-input col-md-6">
-                            <label class="form-label">Contact Name</label>
-                            <input type="text" class="form-control" placeholder="Enter First and Last Name">
+                            <label class="form-label">Start Date</label>
+                            <div class="input-group startdate">
+                                <input type="date" class="form-control" placeholder="Start Date">
+                            </div>
                         </div>
                         <div class="form-input col-md-6">
-                            <label class="form-label">Contact Type</label>
+                            <label class="form-label">Due Date</label>
+                            <input type="date" class="form-control" placeholder="Start Date">
+                        </div>
+                        <div class="form-input col-md-6">
+                            <label class="form-label">Status</label>
                             <select class="form-select">
-                                <option selected>Select</option>
-                                <option>Primary</option>
-                                <option>Employee</option>
-                                <option>Coworker</option>
+                                <option selected>Select Status</option>
+                                <option>Select Status</option>
+                                <option>Select Status</option>
+                                <option>Select Status</option>
                             </select>
                         </div>
                         <div class="form-input col-md-6">
-                            <label class="form-label">Position</label>
-                            <input type="text" class="form-control" placeholder="Position of contact">
+                            <label class="form-label">Billing Type</label>
+                            <select class="form-select">
+                                <option selected>Select Type</option>
+                                <option>Select Type</option>
+                                <option>Select Type</option>
+                                <option>Select Type</option>
+                            </select>
                         </div>
-                        <div class="form-input col-md-6">
-                            <label class="form-label">Phone</label>
-                            <input type="text" class="form-control" placeholder="Enter Phone">
-                        </div>
-                        <div class="form-input col-md-6">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="Enter Email">
-                        </div>
-                        <div class="form-input col-12">
-                            <label class="form-label">Notes</label>
-                            <textarea class="form-control" placeholder="Enter some notes about customer"></textarea>
-                        </div>
+                      
                         <div class="form-footer">
-                            <div class="left"></div>
+                            <div class="left">
+                                <a href="#" data-bs-target="#projectsetting" data-bs-toggle="modal" data-bs-dismiss="modal">Project Settings</a>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="createemail">
+                                    <label class="form-check-label" for="createemail">Send project created
+                                        e-mail</label>
+                                </div>
+                            </div>
                             <div class="right">
                                 <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
                                 <button type="button" class="btn add-button">Add</button>
@@ -253,6 +256,106 @@
             </div>
         </div>
     </div>
+
+
+      <!-- Project Setting Modal -->
+      <div class="modal fade permissions" id="projectsetting" data-bs-backdrop="static" aria-hidden="true"
+      aria-labelledby="projectsettinglabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <a href="javascript:void(0)" class="back_icon" data-bs-target="#addproject" data-bs-toggle="modal"
+                      data-bs-dismiss="modal"><span class="icon icon-back"></span></a>
+                  <h5 class="modal-title">Project Settings</h5>
+                  <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <h3>Allow Customer To View</h3>
+                      <div class="settings gridthree">
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="task">
+                              <label class="form-check-label" for="task">Task</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="checklist">
+                              <label class="form-check-label" for="checklist">Task Checklist Items</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="timesheets">
+                              <label class="form-check-label" for="timesheets">Timesheets</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="comments">
+                              <label class="form-check-label" for="comments">Task Comments</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="loggedtime">
+                              <label class="form-check-label" for="loggedtime">Task Total Logged Time</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="activitylog">
+                              <label class="form-check-label" for="activitylog">Activity Log</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="attachments">
+                              <label class="form-check-label" for="attachments">Task Attachments</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="finance">
+                              <label class="form-check-label" for="finance">Finance Overview</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="teammembers">
+                              <label class="form-check-label" for="teammembers">Team Members</label>
+                          </div>
+                      </div>
+                      <div class="dropdown-divider"></div>
+                      <h3>Allow Customer To</h3>
+                      <div class="settings gridtwo">
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="createtasks">
+                              <label class="form-check-label" for="createtasks">Create Tasks</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="uploadfiles">
+                              <label class="form-check-label" for="uploadfiles">Upload Files</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="edittasks">
+                              <label class="form-check-label" for="edittasks">Edit Tasks (only tasks created from
+                                  contact)</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="hideproject">
+                              <label class="form-check-label" for="hideproject">Hide project tasks</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="taskcomment">
+                              <label class="form-check-label" for="taskcomment">Comment on project tasks</label>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="uploadattachments">
+                              <label class="form-check-label" for="uploadattachments">Upload Attachments On
+                                  Tasks</label>
+                          </div>
+                      </div>
+
+                      <div class="form-footer">
+                          <div class="left">
+                          </div>
+                          <div class="right">
+                              <a href="javascript:void(0)" class="" data-bs-dismiss="modal">Cancel</a>
+                              <button type="button" class="btn add-button">Add</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+
+          </div>
+      </div>
+  </div>
+  <!-- Add Project Modal -->
 
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -1,0 +1,208 @@
+@import "../utilities/main.scss";
+
+#addmember {
+    .modal-dialog {
+        max-width: $width_450;
+
+        .modal-content {
+            .modal-header {
+                padding: $space_20;
+            }
+
+            hr {
+                background-color: $color_EBEFF2;
+                opacity: 1;
+            }
+
+            .am {
+                @include flex_between;
+                padding: $space_20;
+                @include border_with_radius;
+                margin: $space_20;
+            }
+
+            .mn {
+                width: 100%;
+            }
+
+            .mn img {
+                width: $width_36;
+                height: $height_36;
+                border-radius: $border-radius_50;
+                float: left;
+                margin-right: $space_12;
+            }
+
+            .mn h4 {
+                font-weight: $font_weight_500;
+                color: $color_5381E9;
+                font-size: $font_size_13;
+                line-height: $line_height_24;
+            }
+
+            .mn h6 {
+                font-weight: $font_weight_400;
+                color: $color_98A3B2;
+                font-size: $font_size_13;
+                line-height: $line_height_24;
+            }
+
+            .am h5 {
+                @include table_text;
+            }
+
+            .am span.icon {
+                font-size: $font_size_16;
+                color: $color_B4BBC3;
+            }
+
+            .form-footer {
+                margin: $space_20;
+            }
+
+            span.btn-close {
+                right: $space_12;
+                position: relative;
+            }
+        }
+    }
+}
+
+#stardate {
+    .modal-dialog {
+        max-width: $width_450;
+
+        .modal-content {
+            .modal-header {
+                padding: $space_20;
+            }
+
+            hr {
+                background-color: $color_EBEFF2;
+                opacity: 1;
+            }
+
+            .form-footer {
+                margin: $space_20;
+            }
+
+            span.btn-close {
+                right: $space_12;
+                position: relative;
+            }
+
+
+        }
+    }
+}
+
+.project_dashboard {
+
+    .tags {
+        @include label_text;
+    }
+
+    hr {
+        background-color: $color_EBEFF2;
+        opacity: 1;
+    }
+
+
+}
+
+
+.project_info_view {
+    p {
+        &.des {
+            @include table_text;
+            margin: 0px;
+        }
+    }
+
+    .image {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            @include flex_center;
+
+            li {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                border: 1px solid white;
+                position: relative;
+                box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+                -webkit-transition: 0.2s ease;
+                transition: 0.2s ease;
+                overflow: hidden;
+                background: $color_DDF4ED;
+                margin-right: -15px;
+                @include flex_center;
+            }
+        }
+    }
+
+    .innerdata {
+        @include flex_center_start;
+
+
+        .info_data {
+            width: 50%;
+        }
+
+        .sp {
+            width: 50%;
+            display: flex;
+            padding-right: $space_25;
+            justify-content: end;
+
+            .status_progress {
+                margin-right: $space_40;
+            }
+        }
+
+        .image ul li {
+            margin-left: -15px;
+            margin-right: 0px;
+            ;
+        }
+    }
+
+    .pinfo {
+        padding-left: $space_25;
+        padding-right: $space_25;
+
+        ul {
+            @include flex_start;
+            padding-left: 0;
+            padding-right: $space_80;
+
+        }
+
+        li {
+         list-style-type: none;   
+
+         b{
+         display: block;;   
+         }
+        }
+
+        span{
+        font-size: $font_size_14;
+        color:$color_475462;
+        opacity: 0.5;    
+        }
+
+    }
+
+    .notes{
+    padding:0px $space_25 $space_25 $space_25 !important;    
+
+    .notes_info{
+    margin-bottom: 0px !important;    
+    }
+    }
+
+
+}
